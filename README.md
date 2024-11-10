@@ -65,7 +65,7 @@ To run this project
 4. Activate the virtual environment (on Windows):
 
    ```bash
-   env\Scripts\activate
+   venv\Scripts\activate
    ```
 
 5. Install dependencies:
