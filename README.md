@@ -6,12 +6,12 @@
 * [Setup](#running)
 
 ## General info
+![img.png](img.png)
 Sewage System Route Generator calculates the total length and depth 
 of pipes for installation and generate pipeline routes with turtle. 
 The generator is based on the A* algorithm.
-Input data are kept in points.csv. Mandatory structure of the file:
-
-![img.png](img.png)
+Input data are kept in points.csv.
+Mandatory structure of the file:
 
 >15, 10,  length and width of the building
 >
