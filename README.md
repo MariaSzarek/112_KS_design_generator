@@ -42,7 +42,41 @@ To return dimension of pipes depending on how many points are already
 connected to main pipe and change slope of pipes.
 
 ## Running
-To run this project 
->python main.py 
+To run this project
 
+1. Clone this repository to your local machine:
 
+   ```bash
+   git clone -b branch_name <repository address>
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd 112_KS_design_generator
+   ```
+
+3. Create a virtual environment:
+
+   ```bash
+   python -m venv venv
+   ```
+
+4. Activate the virtual environment (on Windows):
+
+   ```bash
+   env\Scripts\activate
+   ```
+
+5. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+6. Run script:
+
+   ```bash
+   python main.py
+   ```
+   
