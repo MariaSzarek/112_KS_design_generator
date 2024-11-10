@@ -1,9 +1,9 @@
 # Sewage system with Turtle
 
 ## Table of Contents
-* [General info]  
-* [Technologies]
-* [Setup]
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#running)
 
 ## General info
 Sewage System Route Generator calculates the total length and depth 
