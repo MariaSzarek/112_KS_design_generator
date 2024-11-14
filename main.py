@@ -6,8 +6,8 @@ import csv
 import turtle
 
 scale = 30
-x=0
-y=0
+x = 0
+y = 0
 
 with open("points.csv", "r") as file:
     reader = csv.reader(file)
@@ -19,7 +19,9 @@ with open("points.csv", "r") as file:
     to_center = offset(x, y, scale)
 
 if x > 0 and y > 0 and all_points[0].y == 0:
-    print("The building dimensions and the last point of the sewage system are provided correctly")
+    print(
+        "The building dimensions and the last point of the sewage system are provided correctly"
+    )
 for i in all_points:
     if i.x <= x and i.y <= y:
         pass
@@ -48,7 +50,9 @@ for the_point in all_points[1:]:
     other_route = first_route.copy()[:-1]
     for some_point in first_route[:-1]:
         route = find_route(the_point, some_point, x, y)
-        if route and len(route) < len(other_route) and route[-1].y <= route[-2].y: #condition to connect pipes in good direction (final point on X-axis (y=0)
+        if (
+            route and len(route) < len(other_route) and route[-1].y <= route[-2].y
+        ):  # condition to connect pipes in good direction (final point on X-axis (y=0)
             other_route = route
     routes[(the_point.x, the_point.y)] = [(point.x, point.y) for point in other_route]
 
@@ -65,7 +69,7 @@ for k, i in routes.items():
 
 pipe_lenght = 0
 for i in final_routes.values():
-    pipe_lenght += len(i)-1
+    pipe_lenght += len(i) - 1
 print(f"Length of pipelines: {pipe_lenght} m")
 
 
@@ -76,7 +80,7 @@ for i in final_routes.values():
             end_point_i = i[-1]
             index_end_point_j = j.index(end_point_i) if end_point_i in j else None
             if index_end_point_j is not None:
-                longest_route_len = (len(j) - index_end_point_j - 1 + len(i) - 1)
+                longest_route_len = len(j) - index_end_point_j - 1 + len(i) - 1
                 if len(first_route) < longest_route_len:
                     longest_route = i[:-1] + j[index_end_point_j:]
 
@@ -84,7 +88,9 @@ longest_route_len = len(longest_route)
 print(f"The longest route: {longest_route}")
 print(f"Length of longest route: {longest_route_len}")
 excavation_depth = depth(longest_route_len)
-print(f"The last point is lowered by {excavation_depth}m from the bottom of the first point")
+print(
+    f"The last point is lowered by {excavation_depth}m from the bottom of the first point"
+)
 
 
 with open("routes.csv", "w") as csv_file:

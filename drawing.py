@@ -2,10 +2,12 @@ import turtle
 
 SPEED = 10
 
+
 def offset(x, y, scale):
     offset_x = x / 2 * scale
     offset_y = y / 2 * scale
     return (offset_x, offset_y)
+
 
 def draw_points(points, offset, scale):
     t = turtle.Turtle()
@@ -17,6 +19,7 @@ def draw_points(points, offset, scale):
         t.goto(point[0] * scale - offset[0], point[1] * scale - offset[1])
         t.dot(5)
 
+
 def draw_coordinates(points, offset, scale):
     t = turtle.Turtle()
     t.speed(SPEED)
@@ -25,6 +28,7 @@ def draw_coordinates(points, offset, scale):
         t.goto(point.x * scale - offset[0], point.y * scale - offset[1] - 20)
         t.pendown()
         t.write(f"({point.x}, {point.y})", align="center")
+
 
 def draw_building(x, y, scale):
     t = turtle.Turtle()

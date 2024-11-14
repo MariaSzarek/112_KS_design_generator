@@ -1,6 +1,7 @@
 import heapq
 from points import Point
 
+
 def find_route(the_point, last_point, dim_x, dim_y):
     open_list = [(0, the_point)]
     closed_list = set()
@@ -42,11 +43,7 @@ def find_route(the_point, last_point, dim_x, dim_y):
 
     return None
 
+
 def depth(length):
     bottom = length / 100 * 2
     return bottom
-
-
-
-
-
