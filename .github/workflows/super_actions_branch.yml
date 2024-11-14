@@ -1,6 +1,9 @@
 name: Super-Linter_actions
 
-on: push
+on: 
+  push: 
+    branches:
+      - actions_update
 
 jobs:
   super-lint:
@@ -13,5 +16,5 @@ jobs:
       - name: Run Super-Linter
         uses: github/super-linter@v4
         env:
-          DEFAULT_BRANCH: actions_update
+          DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
